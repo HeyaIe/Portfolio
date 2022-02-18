@@ -1,0 +1,450 @@
+body {
+    margin: 0%;
+    background-color: #fff;
+}
+
+.Navbar{
+    overflow: hidden;
+    background-color: black;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    animation: moveNav 4s;
+    -webkit-animation: moveNav 4s;
+}
+
+.Navbar a{
+    float: left;
+    display: block;
+    color: #fff;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 20px;
+    text-align: center;
+    position: relative;
+    animation: moveNavText 4s;
+    -webkit-animation: moveNavText 4s;
+}
+
+.Navbar a:hover{
+    background-color: #fff0c4;
+    color: black;
+    font-weight: bold;
+}
+
+.Navbar a.active{
+    background-color: #fff0c4;
+    color: black;
+}
+
+/* moveNav animation effect for moving the nav bar in from the left of the screen */
+@keyframes moveNav {
+    from {left: -100vw;} /* The navbar is starting off screen to the left */
+    to {left: 0vw;} /* This moves the navbar into place on the screen */
+}
+
+/* moveNavText animation effect for moving the navbar text from above the view to the navbar */
+@keyframes moveNavText {
+    from {top: -100vw;} /* This sets the navbar text 100% above the viewport */
+    to {top: 0vw;} /* This lowers the navbar text onto the navbar */
+}
+
+/* Screens 576px and smaller will display navbar links equally distributed */
+@media screen and (max-width: 576px) {
+    .Navbar a{
+        width: 25%; /* This makes each link take up 1/4 of the navbar */
+        font-size: 12px;
+    }
+}
+
+.Background_Image img{
+    border-radius: 0;
+    position: absolute;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -3;
+    opacity: 1;
+    filter: grayscale(75%);
+}
+
+h1.Image_Text{
+    position: relative;
+    -webkit-animation: moveImageText 5s;
+    animation: moveImageText 5s;
+}
+
+@keyframes moveImageText {
+    from{
+        top: -100vw;
+    }
+    to{
+        top: 0vw;
+    }
+}
+
+/* Video Styling */
+#Background_Video{
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -2;
+}
+
+    
+/* Here using -webkit, we make angle
+of 45 degree of falling star */
+.sky {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    -webkit-transform: rotateZ(45deg);
+    transform: rotateZ(45deg);
+}
+    
+/* Here we are making roundabout balls */
+.star {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    height: 2px;
+    border-radius: 885px;
+    background: linear-gradient(-45deg,
+        #eef0f5, rgba(0, 0, 255, 0));
+    
+    -webkit-filter: drop-shadow(0 0 6px #eef1f8);
+    filter: drop-shadow(0 0 6px #d7dff0);
+    -webkit-animation: tail 3000ms ease-in-out infinite,
+        shooting 3000ms ease-in-out infinite;
+    animation: tail 3000ms ease-in-out infinite,
+        shooting 3000ms ease-in-out infinite;
+}
+    
+/* Here we add before and after effect to star */
+.star::before,
+.star::after {
+    content: "";
+    position: absolute;
+    top: calc(50% - 1px);
+    right: 0;
+    height: 2px;
+    background: linear-gradient(
+        -45deg,
+        rgba(0, 0, 255, 0),
+        #eaeef8,
+        rgba(0, 0, 255, 0)
+    );
+    -webkit-transform: translateX(50%) rotateZ(45deg);
+    transform: translateX(50%) rotateZ(45deg);
+    border-radius: 100%;
+    -webkit-animation: shining 3000ms ease-in-out infinite;
+    animation: shining 3000ms ease-in-out infinite;
+}
+.star::after {
+    -webkit-transform: translateX(50%) rotateZ(-45deg);
+    transform: translateX(50%) rotateZ(-45deg);
+}
+    
+/* adding location of each
+nth-child, animations, delays, and
+before and after effects to each
+and every star */
+.star:nth-child(1) {
+    top: calc(50% - -119px);
+    left: calc(50% - 43px);
+    -webkit-animation-delay: 4000ms;
+    animation-delay: 4000ms;
+    }
+    .star:nth-child(1)::before,
+    .star:nth-child(1)::after {
+    -webkit-animation-delay: 4000ms;
+    animation-delay: 4000ms;
+    }
+    .star:nth-child(2) {
+    top: calc(50% - -43px);
+    left: calc(50% - 37px);
+    -webkit-animation-delay: 5000ms;
+    animation-delay: 5000ms;
+    }
+    .star:nth-child(2)::before,
+    .star:nth-child(2)::after {
+    -webkit-animation-delay: 5000ms;
+    animation-delay: 5000ms;
+    }
+    .star:nth-child(3) {
+    top: calc(50% - -40px);
+    left: calc(50% - 222px);
+    -webkit-animation-delay: 7000ms;
+    animation-delay: 7000ms;
+    }
+    .star:nth-child(3)::before,
+    .star:nth-child(3)::after {
+    -webkit-animation-delay: 7000ms;
+    animation-delay: 7000ms;
+    }
+
+    
+/* generate effect in tail of star */
+@keyframes tail {
+    0% {
+        width: 0;
+    }
+    30% {
+        width: 100px;
+    }
+    100% {
+        width: 0;
+    }
+}
+    
+/* generate shining effect in head of star */
+@keyframes shining {
+    0% {
+        width: 0;
+    }
+    50% {
+        width: 30px;
+    }
+    100% {
+        width: 0;
+    }
+}
+    
+/* adding webkit-animation
+to head of star */
+@-webkit-keyframes shining {
+    0% {
+        width: 0;
+    }
+    50% {
+        width: 30px;
+    }
+    100% {
+        width: 0;
+    }
+}
+    
+/* adding webkit-animation
+to tail of star */
+@-webkit-keyframes tail {
+    0% {
+        width: 0;
+    }
+    30% {
+        width: 100px;
+    }
+    100% {
+        width: 0;
+    }
+}
+    
+/* adding webkit-animation
+for shooting effect */
+@-webkit-keyframes shooting {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    100% {
+        -webkit-transform: translateX(270px);
+        transform: translateX(270px);
+    }
+}
+    
+/* shooting effect */
+@keyframes shooting {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+    }
+    100% {
+        -webkit-transform: translateX(270px);
+        transform: translateX(400px);
+    }
+}
+
+h1{
+    font-variant: small-caps;
+    font-family: optima;
+    text-align: center;
+    margin-top: 3%;
+    color: #fff0c4;
+    transition: transform 1s ease;
+    text-shadow: 2px 2px 10px black;
+}
+
+h1:hover{
+    transform: rotate(360deg) scale(1.3);
+    transition: 2s;
+}
+
+p{
+    font-family: 'luminari', georgia;
+    text-align: justify;
+    font-size: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #fff0c4;
+}
+
+.center{
+    text-align: center;
+}
+
+a{
+    color: red;
+}
+
+/* Universal selector that applies effects to all elements on page */
+*{
+    box-sizing: border-box;
+}
+
+img{
+    border-radius: 8px;
+    width: 100%;
+    height: 400px;
+    /* Block display ensures images can be centered */
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.Column_1{
+    border-top: .5px solid red;
+    float: left;
+    width: 50%;
+    padding: 10px;
+    padding-top: 3%;
+    height: 400px;
+    background-color: #080808;
+    border-radius: 8px;
+    opacity: 0.5;
+}
+
+.Column_2{
+    border-top: .5px solid red;
+    float: left;
+    width: 50%;
+    height: 400px;
+    opacity: 0.5;
+}
+
+
+.Row::after{
+    content: "";
+    display: table;
+    /* Clears any other elements from floating left or right
+    of an element */
+    clear:both;
+}
+
+input[type=text]{
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+    font-family: sans-serif;
+}
+
+input[type=text]:hover{
+    box-shadow: 4px 2px 5px maroon inset;
+}
+
+input[type=submit]{
+    background-color: #fff;
+    color: black;
+    font-weight: bold;
+    font-size: large;
+    padding: 10px 12px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: monospace;
+}
+
+input[type=submit]:hover{
+    background-color: palegoldenrod;
+    animation: scale 1s infinite;
+}
+
+@keyframes scale {
+    0%, 100%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.1);
+    }
+}
+
+form{
+    border-radius: 5px;
+    color: #fff;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+
+
+
+
+
+
+
+
+.flip-box{
+    width: 100%;
+    height: 100%;
+}
+
+  
+.flip-box-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-box:hover .flip-box-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-box-front, .flip-box-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+
+.flip-box-front {
+    background-color: #bbb;
+    color: black;
+}
+
+.flip-box-back {
+    background-color: #555;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+
+.flip-box-back p{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(2);
+    color: white;
+}

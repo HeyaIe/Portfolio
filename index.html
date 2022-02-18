@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>My Portfolio</title>
+        <link rel="stylesheet" type="text/css" href="PortfolioProj/CSS/Portfolio.css">
+        <link href='https://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+        
+    </head>
+
+    <body>
+    
+        <!-- Navbar -->
+        <div class="Navbar">
+            <a class="active" href="#Home">Home</a>
+            <a href="#About">About</a>
+            <a href="#GitHub">GitHub</a>
+            <a href="#Contact">Contact</a>
+        </div>
+
+        <br><br>
+
+        <!-- Background Image -->     
+        <div class="Background_Image">
+            <img src="PortfolioProj/Media/Images/Forest.jpg" alt="Background Image">
+            
+        </div> 
+        <h1 class="Image_Text" id="Home">My Portfolio</h1>
+        
+        <br><br><br><br>
+        <br><br><br><br>
+
+        <!-- Background Video --> 
+        <video autoplay muted loop id="Background_Video">
+            <source src="PortfolioProj/Media/Videos/BackgroundVideo.mp4" type="video/mp4">
+            Your browser does not support HTML5 videos.
+        </video>
+       
+
+        
+
+        <div class="sky">
+  
+            <!-- We are making divisions, every div.
+            represent a single roundabout balls -->
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            
+        </div>
+
+        <!-- Animation_Text -->
+
+        <!-- About Section -->
+        <div class="Row" id="About">
+            <!-- Left Column -->
+            <div class="Column_2">
+
+                <div class="flip-box">
+                    <div class="flip-box-inner">
+                        <div class="flip-box-front">
+                            <img src="PortfolioProj/Media/Images/image1.jpg" alt="About image">
+                        </div>
+                        <div class="flip-box-back">
+                            <img src="PortfolioProj/Media/Images/image1.jpg" alt="About image">
+                            <p>Random Image 1</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!--
+                <img src="Media/Images/image1.jpg" alt="About image">
+                -->
+            </div>
+            <!-- Right Column -->
+            <div class="Column_1">
+                <h1>About</h1>
+                <p>
+                    I am an aspiring software developer who loves to code!
+                    With a passion for gaming, my goal is to develop games
+                    that people can enjoy!<br>
+                    <br>
+                    I am currently enrolled in <a href="https://www.learncodinganywhere.com"
+                    target="_blank">The Tech Academy</a>'s Game Developer Boot Camp.
+                    With experiece in basic Python, C#, and C++.<br>
+                    <br>
+                    Always eager to learn and take joy in working in teams!<br>
+                    You can <a href="#Contact">Contact</a> me for more information!
+                </p>
+            </div>
+        </div>
+
+        <!-- GitHub Section -->
+        <div class="Row" id="GitHub">
+            <!-- Left Column -->
+            <div class="Column_1">
+                <h1>GitHub</h1>
+                <p>
+                    You can view my coding projects on my GitHub profile here:<br>
+                    <p class="center"><a href="https://github.com/HeyaIe"
+                        target="_blank">My Github</a>
+                    </p>
+                </p>
+            </div>
+            <!-- Right Column -->
+            <div class="Column_2">
+
+                <div class="flip-box">
+                    <div class="flip-box-inner">
+                        <div class="flip-box-front">
+                            <img src="PortfolioProj/Media/Images/GitHub.jpg" alt="GitHub image">
+                        </div>
+                        <div class="flip-box-back">
+                            <a href="https://github.com/HeyaIe" target="_blank">
+                                <img src="PortfolioProj/Media/Images/GitHub2.jpg" alt="About image">
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <!--
+                <a href="https://github.com/HeyaIe" target="_blank">
+                    <img src="Media/Images/GitHub.jpg" alt="GitHub image">
+                </a>
+                -->
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="Row" id="Contact">
+            <!-- Left Column -->
+            <div class="Column_2 Column_Tall">
+
+                <div class="flip-box">
+                    <div class="flip-box-inner">
+                        <div class="flip-box-front">
+                            <img src="PortfolioProj/Media/Images/Contact.jpg" alt="Contact image">
+                        </div>
+                        <div class="flip-box-back">
+                            <img src="PortfolioProj/Media/Images/Contact.jpg" alt="Contact image">
+                            <p>Random Image 3</p>
+                        </div>
+                    </div>
+                </div>
+                <!--
+                <img src="Media/Images/Contact.jpg" alt="Contact image">
+                -->
+            </div>
+            <!-- Right Column -->
+            <div class="Column_1 Column_Tall">
+                <h1>Contact</h1>
+                <!-- Form -->
+                <form action="https://formspree.io/f/xvolaaoj" method="POST">
+                    <label>Name:</label>
+                        <input type="text" placeholder="Please enter your name here">
+                    <label>Email:</label>
+                        <input type="text" id="Email" name="Email" placeholder="Please enter your email here">
+                    <label>Message:</label>
+                        <input type="text" id="Message" name="Message" placeholder="Please write your message here">
+                        <input type="submit" value="SUBMIT">
+                </form>
+
+            </div>
+        </div>
+
+        <!-- Footer Section -->
+        <footer>
+            <p>
+                <p class="center">&copy; Bryan, 2022</p>
+            </p>
+        </footer>
+
+    </body>
+</html>
