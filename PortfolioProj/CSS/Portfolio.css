@@ -763,6 +763,9 @@ button:hover,
     .Column_2{
         height: 550px;
     }
+    img{
+        height: auto;
+    }
 }
 
 /* Media rule to remove margin-top from h1 elements for extra
