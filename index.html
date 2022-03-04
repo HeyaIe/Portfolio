@@ -14,6 +14,7 @@
         <!-- Navbar -->
         <div class="Navbar">
             <a class="active" href="#Home">Home</a>
+            <a href="#Slideshow">Slideshow</a>
             <a href="#About">About</a>
             <a href="#GitHub">GitHub</a>
             <a href="#Contact">Contact</a>
@@ -28,14 +29,46 @@
         </div> 
         <h1 class="Image_Text" id="Home">My Portfolio</h1>
         
-        <br><br><br><br>
-        <br><br><br><br>
+        <!-- Slideshow section -->
+        <div id="Slideshow">
+            <div id="SlideshowBackground">
+                <div id="SlideshowContainer" onmouseover="pause()" onmouseout="resume()">
+                    <!-- 1st Slide -->
+                    <div class="mySlides fade">
+                        <img class="SlideshowImages" src="./PortfolioProj/Media/Images/avatar.png" alt="Avatar" style="height: 400px;">
+                        <div class="text">Bryan</div>
+                    </div>
+                    <!-- 2nd Slide -->
+                    <div class="mySlides fade">
+                        <img class="SlideshowImages" src="PortfolioProj/Media/Images/HTML.jpg" alt="JavaScript pic" style="height: 400px">
+                        <div class="text">Currently learning JavaScript in conjunction
+                             with HTML & CSS.
+                        </div>
+                    </div>
+                    <!-- 3rd Slide -->
+                    <div class="mySlides fade">
+                        <img class="SlideshowImages" src="PortfolioProj/Media/Images/C++.jpg" alt="C++ pic" style="height: 400px">
+                        <div class="text">Completed two C++ Udemy courses, one for
+                             C++, and the other for C++ & Unreal Engine.
+                        </div>
+                    </div>
 
-        <!-- Background Video --> 
-        <video autoplay muted loop id="Background_Video">
-            <source src="PortfolioProj/Media/Videos/BackgroundVideo.mp4" type="video/mp4">
-            Your browser does not support HTML5 videos.
-        </video>
+                    <!-- Previous and next buttons -->
+                    <a class="Previous" onclick="plusSlides(-1)">&#10094;</a>
+                    <a class="Next" onclick="plusSlides(1)">&#10095;</a>
+                </div>
+                <br>
+
+                <!-- Slideshow dots -->
+                <div style="text-align: center">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                </div>
+            </div>
+        </div>
+
+        
        
 
         
@@ -97,6 +130,9 @@
             <div class="Column_1">
                 <h1>GitHub</h1>
                 <p>
+                    <!-- Text is overflowing if screen width is too thin,
+                        how do I have it automatically adjust it so that
+                        it goes over to the next line when screen width is too thin?-->
                     You can view my coding projects on my GitHub profile here:<br>
                     <p class="center"><a href="https://github.com/HeyaIe"
                         target="_blank">My Github</a>
@@ -150,7 +186,7 @@
             <div class="Column_1 Column_Tall">
                 <h1>Contact</h1>
                 <!-- Form -->
-                <form action="https://formspree.io/f/xvolaaoj" method="POST">
+                <form action="https://formspree.io/f/xvolaaoj" method="POST" class="firstForm">
                     <label>Name:</label>
                         <input type="text" placeholder="Please enter your name here">
                     <label>Email:</label>
@@ -159,7 +195,27 @@
                         <input type="text" id="Message" name="Message" placeholder="Please write your message here">
                         <input type="submit" value="SUBMIT">
                 </form>
+            </div>
+        </div>
 
+        <!-- Popup Contact -->
+        <div id="PopContact">
+            <button onclick="openForm()" class="PopupButton">CONTACT</button>
+            <div class="form-popup" id="myForm">
+                <form action="https://formspree.io/f/xvolaaoj" method="POST" class="form-container">
+                    <h1>Contact</h1>
+                    <label for="name"><b>Name:</b></label>
+                        <input type="text" placeholder="Enter name here" name="name" required>
+                    <label for="phone"><b>Phone:</b></label>
+                        <input type="tel" placeholder="Enter phone number here" name="phone">
+                    <label for="email"><b>Email:</b></label>
+                        <input type="text" placeholder="Enter email here" name="email" required>
+                    <label for="message"><b>Message:</b></label>
+                        <input type="text" placeholder="Type message here" name="message" required>
+
+                    <button type="submit" class="btn submit">SUBMIT</button>
+                    <button type="button" class="btn cancel" onclick="closeForm()">&times;</button>
+                </form>
             </div>
         </div>
 
@@ -170,5 +226,6 @@
             </p>
         </footer>
 
+        <script src="PortfolioProj/JS/Portfolio.js"></script>
     </body>
 </html>
