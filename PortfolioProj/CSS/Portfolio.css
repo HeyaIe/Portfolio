@@ -403,14 +403,13 @@ h1:hover{
 }
 
 p{
-    position: absolute;
     font-family: 'luminari', georgia;
     text-align: justify;
     font-size: 1.75vw;
     padding-left: 20px;
     padding-right: 20px;
     color: #fff0c4;
-    
+    word-wrap: normal;
 }
 
 .center{
@@ -447,7 +446,6 @@ img{
     height: 400px;
     background-color: #080808;
     border-radius: 8px;
-    
 }
 
 .Column_2{
