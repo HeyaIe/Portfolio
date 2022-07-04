@@ -686,6 +686,9 @@ button:hover,
     p{
         font-size: 3vw;
     }
+    .star{
+        animation: none;
+    }
 }
 
 @media screen and (min-width: 528px) and (max-width: 660px){
@@ -710,9 +713,6 @@ button:hover,
 @media screen and (min-width: 925px) and (max-width: 1050px){
     p{
         font-size: 1.6vw;
-    }
-    .star{
-        visibility: hidden;
     }
 }
 
