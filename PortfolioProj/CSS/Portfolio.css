@@ -712,7 +712,7 @@ button:hover,
         font-size: 1.6vw;
     }
     .star{
-        position: relative;
+        visibility: hidden;
     }
 }
 
