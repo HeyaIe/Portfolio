@@ -686,8 +686,8 @@ button:hover,
     p{
         font-size: 3vw;
     }
-    .star::after{
-        transform: none
+    .star{
+        position: relative;
     }
 }
 
