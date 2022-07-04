@@ -706,9 +706,13 @@ button:hover,
     }
 }
 
+/* Last update */
 @media screen and (min-width: 925px) and (max-width: 1050px){
     p{
         font-size: 1.6vw;
+    }
+    .star{
+        position: relative;
     }
 }
 
